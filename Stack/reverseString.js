@@ -27,9 +27,9 @@ function reverseString(item) {
 
 }
 
-let str = 'karan';
+let str = 'karan pal';
 str = str.split('');
 
 reverseString(str)
-
+str = str.join('')
 console.log(str)
