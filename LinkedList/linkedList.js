@@ -6,7 +6,7 @@ class List{
             next: null,
          };
          this.tail = this.head;
-         this.size = 1
+         this.size = 5;
     }
 
     appendNode(nodeData){
