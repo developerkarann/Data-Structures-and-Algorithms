@@ -54,6 +54,45 @@ class BinarySeachTree {
         }
 
     }
+    preOrder(root) {
+        if (root) {
+            console.log(root.value)
+            this.preOrder(root.left);
+            this.preOrder(root.right)
+
+        }
+    }
+    inOrder(root) {
+        if (root) {
+            this.inOrder(root.left);
+            console.log(root.value)
+            this.inOrder(root.right)
+
+        }
+    }
+    postOrder(root) {
+        if (root) {
+            this.postOrder(root.left);
+            this.postOrder(root.right)
+            console.log(root.value)
+
+        }
+    }
+
+    breadthFirstSearch(root) {
+        let queue = [];
+        queue.push(this.root);
+        while (queue.length) {
+            let current = queue.shift();
+            if (current.left) {
+                queue.push(current.left)
+            }
+            if (current.right) {
+                queue.push(current.right)
+            }
+            console.log(current.value)
+        }
+    }
 
 }
 
@@ -68,7 +107,16 @@ bst.makeTree(40)
 bst.makeTree(23)
 
 
-console.log(bst.search(bst.root, 11))
+// console.log(bst.search(bst.root, 11))
+
+
+// bst.preOrder(bst.root)
+
+// bst.inOrder(bst.root)
+
+// bst.postOrder(bst.root)
+
+bst.breadthFirstSearch(bst.root)
 
 // console.log(bst.isEmptyTree())
 // console.log(bst)
